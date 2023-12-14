@@ -1,12 +1,151 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+:root.theme_light {
+  --font-main: "IBM Plex Mono";
+  --font-weight-title: 700;
+  --font-weight-text: 400;
+  --font-size-text: 18px;
+  --font-size-mobailtitle: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-size-desktoptitle: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --font-style-normal: normal;
+  --color-title-main: #FFC2E6;
+  --color-title-shadow: #FF8DCB;
+  --color-decor: #FF8DCB;
+  --color-text: #353430;
+}
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  background-image: url(../images/cover-image-light.png);
+  --font-main: "IBM Plex Mono";
+  --font-weight-title: 700;
+  --font-weight-text: 400;
+  --font-size-text: 18px;
+  --font-size-mobailtitle: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-size-desktoptitle: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --font-style-normal: normal;
+  --color-title-main: #FFC2E6;
+  --color-title-shadow: #FF8DCB;
+  --color-decor: #FF8DCB;
+  --color-text: #353430;
+}
+
+.theme_light .header__decorated {
+  visibility: hidden;
+}
+
+.theme_light .header::before {
+  border-block-start: 1px solid var(--color-text);
+  border-inline-end: 1px solid var(--color-text);
+}
+
+.theme_light .header::after {
+  border-block-end: 1px solid var(--color-text);
+  border-inline-start: 1px solid var(--color-text);
+}
+
+.theme_light .header__theme-menu-item {
+  color: var(--color-text);
+}
+
+.theme_light .header__theme-menu-item:hover {
+  outline: 1px solid rgba(50, 49, 45, 0.40);
+}
+
+.theme_light .header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--color-text);
+}
+
+.theme_light .header__theme-menu-button_active {
+  outline: 1px solid var(--color-text)
+}
+
+.theme_light .header__title {
+  color: var(--color-title-main);
+  text-shadow: 4px 4px 0px var(--color-title-shadow);
+  font-family: var(--font-main);
+  font-size: var(--font-size-mobailtitle);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-title);
+  line-height: 82.5%;
+}
+
+.theme_light .header__title-decor {
+  color: var(--color-text);
+  background-color: var(--color-decor);
+  font-family: var(--font-main);
+  font-size: var(--font-size-text);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-title);
+  line-height: 23.4px;
+}
+
+.theme_light .main__title-decor {
+  color: var(--color-text);
+  background-color: var(--color-decor);
+  font-family: var(--font-main);
+  font-size: var(--font-size-text);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-title);
+  line-height: 23.4px;
+}
+
+.theme_light .main__title-decor-low {
+  color: var(--color-text);
+  background-color: var(--color-decor);
+  font-family: var(--font-main);
+  font-size: var(--font-size-text);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-text);
+  line-height: 23.4px;
+}
+
+.theme_light .main__content-title {
+  color: var(--color-text);
+}
+
+.theme_light .main__content-item {
+  color: var(--color-text);
+}
+
+.theme_light .text-link {
+  text-shadow: 2px 2px 0 var(--color-decor);
+}
+
+.theme_light .text-link:hover {
+  border-block-end: 1px solid var(--color-text);
+}
+
+.theme_light .text-link:focus-visible {
+  outline: 1px solid var(--color-text);
+}
+
+.theme_light .footer::before {
+  border-block-start: 1px solid var(--color-text);
+  border-inline-end: 1px solid var(--color-text);
+}
+
+.theme_light .footer__title {
+  color: var(--color-title-main);
+  text-shadow: 2px 2px 0px var(--color-title-shadow);
+  font-family: var(--font-main);
+  font-size: var(--font-size-mobailtitle);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-title);
+  line-height: 82.5%;
+}
+
+.theme_light .footer::after {
+  border-block-end: 1px solid var(--color-text);
+  border-inline-start: 1px solid var(--color-text);
+}
+
+@media (prefers-color-scheme:light) {
+  :root {
+    visibility: hidden;
+  }
+}
+
+@media (width >= 1024px) {
+  .page.theme_light {
+    --color-title-shadow: #FF0070;
+    ;
+  }
 }
