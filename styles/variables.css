@@ -1,15 +1,25 @@
 :root {
-  --font-main: "IBM Plex Mono";
+  --font-main: "IBM Plex Mono", "Raleway", Arial, sans-serif;
   --font-weight-title: 700;
   --font-weight-text: 400;
   --font-size-text: 18px;
   --font-size-mobailtitle: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --font-size-desktoptitle: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --font-style-normal: normal;
+  --color-button:#ff0070;
   --color-title-main: #DB00FF;
   --color-title-shadow: #ff0070;
+  --color-title-shadow-big: #ff0070;
+  --color-title-section: #ff0070;
+  --color-decor-element: #ff0070;
   --color-decor: #ff0070;
   --color-title: #000028;
   --color-text: #F1B2CE;
-  --color-hover-text: rgba(255, 0, 112, 0.40);
+  --color-button-active: #ff0070;
+  --color-focus: #ff0070;
+  --color-focus-text: #F1B2CE;
+  --color-hover: rgba(255, 0, 112, 0.40);
+  --color-hover-text: #F1B2CE;
+  --bg-img: url(../images/cover-image-dark.png);
+  --hidden: visible;
 }
