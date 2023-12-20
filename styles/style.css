@@ -109,6 +109,7 @@
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--color-button-active);
+  pointer-events: none;
 }
 
 .header__title {
@@ -290,13 +291,13 @@
   line-height: 0.825;
 }
 
-@media (width <=768px) {
+@media (width < 768px) {
   .header {
     min-height: 668px;
   }
 }
 
-@media (1024px > width >=768px) {
+@media (width >=768px) {
   .page {
     gap: 60px;
   }
@@ -314,7 +315,7 @@
 
   .header__decorated::after {
     inset-inline-end: 28px;
-    inset-block-start: 27px;
+    inset-block-start: 28px;
   }
 
   .header::before {
@@ -395,34 +396,8 @@
 
 @media (width >=1024px) {
 
-  .page {
-    gap: 60px;
-  }
-
   .header {
-    padding-inline-start: 20px;
-    padding-inline-end: 20px;
     min-height: 768px;
-  }
-
-  .header__decorated::before {
-    inset-inline-end: 49px;
-    inset-block-start: 21px;
-  }
-
-  .header__decorated::after {
-    inset-inline-end: 28px;
-    inset-block-start: 28px;
-  }
-
-  .header::before {
-    inset-inline-end: 20px;
-    inset-block-start: 20px;
-  }
-
-  .header::after {
-    inset-block-end: 20px;
-    inset-inline-start: 20px;
   }
 
   .header__theme-menu {
@@ -436,22 +411,14 @@
   }
 
   .header__title {
-    margin-inline-start: -20px;
     margin-block-start: 276px;
     font-size: var(--font-size-desktoptitle);
     text-shadow: 4px 4px 0px var(--color-title-shadow-big);
   }
 
   .header__title-decor {
-    justify-content: end;
     margin-inline-start: 493px;
     margin-block-start: 112px;
-  }
-
-  .main {
-    gap: 80px;
-    padding-inline-start: 20px;
-    padding-inline-end: 20px;
   }
 
   .main__content {
@@ -475,43 +442,22 @@
     grid-template-columns: minmax(649px, max-content);
   }
 
-  .main__content-images {
-    gap: 20px;
-  }
-
-  .images {
-    gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .img1 {
-    grid-column: span 2;
-  }
-
-  .img2 {
-    grid-row: span 2;
-  }
-
-  .img3 {
-    grid-row: span 2;
-  }
-
-  .img5 {
-    grid-column: span 2;
-  }
-
   .footer__title {
     font-size: var(--font-size-desktoptitle);
     text-shadow: 2px 2px 0px var(--color-title-shadow-big);
   }
+}
 
-  .footer::before {
-    inset-inline-end: 20px;
-    inset-block-start: 20px;
+@media (prefers-color-scheme:light) {
+
+  .header__decorated {
+    visibility: var(--hidden);
   }
+}
 
-  .footer::after {
-    inset-inline-start: 20px;
-    inset-block-end: 20px;
+@media (prefers-color-scheme:dark) {
+
+  .header__decorated {
+    visibility: var(--hidden);
   }
 }

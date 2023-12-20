@@ -1,5 +1,5 @@
 :root {
-  --font-main: "IBM Plex Mono", "Raleway", Arial, sans-serif;
+  --font-main: "IBM Plex Mono", "Lucida Console", "Monaco", monospace;
   --font-weight-title: 700;
   --font-weight-text: 400;
   --font-size-text: 18px;

@@ -1,5 +1,5 @@
 .page.theme_dark {
-  --font-main: "IBM Plex Mono", "Raleway", Arial, sans-serif;
+  --font-main: "IBM Plex Mono", "Lucida Console", "Monaco", monospace;
   --font-weight-title: 700;
   --font-weight-text: 400;
   --font-size-text: 18px;
@@ -27,7 +27,7 @@
 @media (prefers-color-scheme:dark) {
 
   :root {
-    --font-main: "IBM Plex Mono", "Raleway", Arial, sans-serif;
+    --font-main: "IBM Plex Mono", "Lucida Console", "Monaco", monospace;
     --font-weight-title: 700;
     --font-weight-text: 400;
     --font-size-text: 18px;
@@ -50,9 +50,5 @@
     --color-hover-text: #F1B2CE;
     --bg-img: url(../images/cover-image-dark.png);
     --hidden: visible;
-  }
-
-  .header__decorated {
-    visibility: var(--hidden);
   }
 }

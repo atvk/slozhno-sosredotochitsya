@@ -1,5 +1,5 @@
 .page.theme_light {
-  --font-main: "IBM Plex Mono", "Raleway", Arial, sans-serif;
+  --font-main: "IBM Plex Mono", "Lucida Console", "Monaco", monospace;
   --font-weight-title: 700;
   --font-weight-text: 400;
   --font-size-text: 18px;
@@ -19,14 +19,15 @@
   --color-focus: #353430;
   --color-focus-text: #353430;
   --color-hover: rgba(50, 49, 45, 0.40);
-  --color-hover-text: rgba(50, 49, 45, 0.40);
+  --color-hover-text:#353430;
   --bg-img: url(../images/cover-image-light.png);
   --hidden: hidden;
 }
 
 @media (prefers-color-scheme:light) {
+ 
   :root {
-    --font-main: "IBM Plex Mono", "Raleway", Arial, sans-serif;
+    --font-main: "IBM Plex Mono", "Lucida Console", "Monaco", monospace;
     --font-weight-title: 700;
     --font-weight-text: 400;
     --font-size-text: 18px;
@@ -46,12 +47,8 @@
     --color-focus: #353430;
     --color-focus-text: #353430;
     --color-hover: rgba(50, 49, 45, 0.40);
-    --color-hover-text: rgba(50, 49, 45, 0.40);
+    --color-hover-text: #353430;
     --bg-img: url(../images/cover-image-light.png);
     --hidden: hidden;
-  }
-
-  .header__decorated {
-    visibility: var(--hidden);
   }
 }
