@@ -444,8 +444,8 @@
 
   .header__title-decor {
     justify-content: end;
-    margin-inline-start: 494px;
-    margin-block-start: 113px;
+    margin-inline-start: 493px;
+    margin-block-start: 112px;
   }
 
   .main {
@@ -502,7 +502,7 @@
 
   .footer__title {
     font-size: var(--font-size-desktoptitle);
-    text-shadow: 4px 4px 0px var(--color-title-shadow-big);
+    text-shadow: 2px 2px 0px var(--color-title-shadow-big);
   }
 
   .footer::before {
